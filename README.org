@@ -1,0 +1,11 @@
+
+For details on photo acquisition:
+  - APPS protocol note paper: https://doi.org/cmxw
+  - https://github.com/jshoyer/raspi-topdown-plant-imaging-12x
+    - Archived versions:
+      https://doi.org/10.5281/zenodo.594707
+
+** 2016-08-26_zip
+- Top-down photos: https://zenodo.org/record/1322154
+- Leaf scans and Canon camera photos:
+  https://zenodo.org/record/1322799

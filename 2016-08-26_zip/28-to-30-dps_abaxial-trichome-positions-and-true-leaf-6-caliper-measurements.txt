@@ -1,0 +1,181 @@
+plantNum	phyllotaxy	zippy	bladeW	bladeL	petioleL	firstLeaf	exclude	notes	sourcePlate	parentVial
+501	ccw	no	6.61	10.20	10.64	7		buried	40	2743
+502	ccw	no	6.56	10.12	8.74	8		leaf 1 became discolored late	53	2833
+503	cw	no	6.34	9.62	8.17	9			54	2833
+504	ccw	yes	4.04	6.15	2.40	7			31	2204
+505	ccw						failed to thrive		1	204
+506							failed to thrive		34	2731
+507	cw	no	5.16	8.21	3.80	5		second rosette has appeared	32	2204
+508	ccw	no	5.07	9.17	9.45	8			14	768
+509							small; multiple rosettes		61	2834
+510	ccw	no	6.19	9.96	9.21	8			2	204
+511							multiple rosettes		13	768
+512	cw	no	5.63	9.29	6.92	8			35	2731
+513	ccw	no	6.84	9.44	8.35	8			41	2743
+514	ccw	no	5.12	8.15	6.40	7			46	2758
+515	cw	yes	3.88	6.12	3.34	7			65	2834
+516	cw	no	4.68	7.54	6.99	8		leaf 2 died	15	768
+517	ccw	no					small---petiole 6 not elongated		62	2834
+518	ccw	no	7.98	10.18	10.09	6			55	2833
+519	ccw	no	6.93	11.97	10.79	7			42	2743
+520	ccw	no	8.16	14.28	12.90	8			56	2833
+521	cw	yes	5.19	15.61	12.30	7			33	2204
+522	cw	no	7.23	9.42	7.94	7			44	2758
+523							failed to thrive		16	768
+524	ccw	yes	8.33	14.93	10.91	9		scraggly. Second third and fourth rosettes forming. It appears that leaf 3 did not really grow	37	2731
+525	ccw	yes	5.10	6.85	5.80	6		second rosette has appeared	63	2834
+526							multiple rosettes		43	2758
+527	cw	yes	4.70	11.71	8.57	6			31	2204
+528	cw	yes	5.35	11.61	5.61	6			36	2731
+529	ccw	no	6.89	12.48	10.53	7			3	204
+530	ccw	no	8.22	10.27	7.94	8			4	204
+531	ccw	no					initially failed to thrive		38	2731
+532							failed to thrive; multiple rosettes		40	2743
+533	ccw	no	5.75	11.51	8.69	6			32	2204
+534							multiple rosettes		57	2833
+535	cw	yes	4.65	9.57	5.25	6			64	2834
+536	cw	no	6.28	12.39	10.47	5			39	2731
+537	cw	yes	5.08	17.22	12.61	7			17	768
+538	cw	no	6.56	10.00	6.12	6			5	204
+539	ccw	no	6.22	10.06	6.59	7			58	2833
+540	cw	yes	6.00	15.59	9.87	7			19	768
+541	cw	no	7.36	12.47	9.15	7			41	2743
+542	cw	no	7.51	10.80	9.78	8			6	204
+543	ccw	yes	7.21	17.28	12.51	7			45	2758
+544	ccw	no	6.83	12.13	8.80	6				2758
+545	cw	no	7.86	14.70	11.67	7			66	2834
+546		yes	6.60	18.37	10.72	6			33	2204
+547		no	7.00	12.14	7.22	7			41	2743
+548		yes	4.46	10.21	9.13	8			20	768
+549	cw	no	6.29	11.56	9.00	8			39	2731
+550	cw	yes	6.40	15.20	10.43	8			23	2204
+551		yes					two rosettes		400	2743
+552	cw	no	5.63	8.79	6.11	10		second rosette has appeared	7	204
+553	cw	yes	6.18	14.04	10.96	7			67	2834
+554	cw	no	6.55	14.69	10.56	7			38	2731
+555	cw	no	8.85	16.95	12.89	6			52	2833
+556		no					multiple rosettes		48	2758
+557	ccw	no	8.36	17.43	10.80	6			43	2758
+558	cw	yes	5.32	11.91	9.14	7			68	2834
+559	ccw	yes	5.87	19.72	11.11	5		surprisingly hard	21	768
+560		no	10.06	16.06	14.71	9			8	204
+561	cw	yes	4.99	10.64	7.33	7			70	2834
+562	cw	yes	6.04	9.94	6.14	6			71	2834
+563	cw	no	6.51	12.48	9.72	5			32	2204
+564	cw	no	8.65	13.66	12.79	9			9	204
+565	ccw	yes	7.27	13.77	12.22	8			33	2204
+566		no	8.30	12.31	10.45	8			37	2731
+567	ccw	no	8.51	15.78	13.11	7			59	2833
+568	cw	yes	6.33	14.03	11.35	7			40	2743
+569		no					multiple rosettes		36	2731
+570							multiple rosettes		24	768
+571	ccw	no	7.26	11.20	8.30	8			44	2758
+572	cw	no	8.40	13.54	11.72	6			45	2758
+573	cw	no	7.80	11.95	10.11	8			41	2743
+574	cw	no	9.10	16.26	13.51	7			60	2833
+575	cw	no	10.59	17.97	16.78	8			10	204
+576	cw	no	8.89	16.13	13.94	7		leaf 1 died	42	2743
+577	ccw	no	7.10	11.98	9.54	7			52	2833
+578	ccw	yes	7.15	13.91	12.65	8			25	768
+579		yes				 	multiple rosettes		28	768
+580	ccw	no	7.78	14.97	15.88	8			53	2833
+581	cw	yes	7.53	17.12	12.35	8			72	2834
+582	cw	no	9.07	13.41	12.62	9			11	204
+583		yes					multiple rosettes		61	2834
+584	ccw	no	7.86	15.76	12.69	7			35	2731
+585	cw	no	8.12	18.40	14.57	7			46	2758
+586		no					multiple rosettes		40	2743
+587	ccw	no	8.08	14.49	12.56	9			12	204
+588	ccw	yes	5.75	14.26	14.06	7			31	2204
+589	ccw	yes	6.10	8.75	9.09	9		Leaf 6 deformed	32	2204
+590	ccw	no	8.19	9.69	10.65	9			47	2758
+601	ccw	no	8.25	15.54	13.30	7			41	2743
+602	ccw	no	8.57	12.70	13.88	9			48	2758
+603	ccw	yes	7.61	13.45	13.07	6		second rosette has appeared	34	2731
+604	ccw	no	8.20	16.66	16.09	8			54	2833
+605		yes					second tiny rosette	cannot tell true leaves from cotelydons. One buried. See phone photos.	29	768
+606	cw	yes	6.45	18.48	14.10	6			33	2204
+607		no	11.53	18.32	18.29	7			42	2743
+608		yes					multiple rosettes		38	2731
+609	cw	no	7.22	12.52	10.96	8		leaf 2 died	55	2833
+610	ccw	no	8.01	16.24	11.93	6			43	2758
+611	ccw	yes	6.69	17.37	13.02	7			31	2204
+612		no					multiple rosettes		75	204
+613	ccw	yes	7.15	18.16	11.68	7			30	768
+614		no					multiple rosettes		76	204
+615	cw	yes	5.12	11.34	7.49	6			63	2834
+616							failed to thrive		40	2743
+617		no					multiple rosettes		39	2731
+618							failed to thrive		78	204
+619		no					multiple rosettes		19	768
+620	cw	yes	6.22	16.55	12.09	7			32	2204
+621							failed to thrive	Escape seedling in pot	64	2834
+622		no					multiple rosettes		44	2758
+623	cw	yes	7.31	12.28	10.50	7			33	2204
+624	ccw	no	7.71	11.66	9.36	9			56	2833
+625	cw	no	8.26	13.72	8.22	7			45	2758
+626	cw	yes	10.00	19.98	12.16	5			16	768
+627							failed to thrive		57	2833
+628	ccw	yes	7.49	16.92	11.11	5			65	2834
+629	ccw	no	10.13	19.86	17.12	5			37	2731
+630	cw	no	11.86	19.02	18.11	9			41	2743
+631							failed to thrive		83	204
+632	ccw	no	9.48	20.21	15.54	6			46	2758
+633	ccw	no	10.44	19.78	16.21	7			35	2731
+634	ccw	yes	8.72	12.83	10.98	8			67	2834
+635		no	8.95	16.71	15.44	8			1	204
+636	cw	yes	11.23	21.39	16.98	5			15	768
+637	ccw	no	11.98	27.42	20.20	5			42	2743
+638		yes	7.97	22.83	16.01	5			31	2204
+639	ccw	no	9.36	21.43	16.98	5			34	2731
+640		no	10.32	22.95	17.33	7			47	2758
+641	ccw	no	10.07	16.75	14.01	4		second rosette appeared quite early on	40	2743
+642		yes	7.74	14.56	16.32	6			58	2833
+643		yes	8.94	19.38	12.29	6			14	768
+644		yes					multiple rosettes		59	2833
+645	ccw	yes	6.18	13.57	10.34	5			68	2834
+646		no	7.91	20.73	13.62	6			38	2731
+647		yes					muliple rosettes appeared late		66	2834
+648		no	8.28	18.10	14.41	7			60	2833
+649		no	9.13	19.94	16.57	6			52	2833
+650	ccw	no	9.15	13.83	14.84	7		a second tiny rosette appearing underneath	41	2743
+651	ccw	yes	9.06	20.58	13.65	5			13	768
+652		no	6.75	16.53	13.51	6			39	2731
+653		no	7.42	12.52	10.22	8			2	204
+654		yes	7.40	17.79	13.72	5			33	2204
+655		no	10.45	19.43	17.65	7			42	2743
+656		no					multiple rosettes		48	2758
+657		yes	6.35	15.25	13.27	7			25	768
+658		yes	6.16	12.79	8.56	7		second rosette has started to appear	32	2204
+659		yes					multiple rosettes		77	2834
+660	cw	no					multiple rosettes	second rosette has started to appear	3	204
+661	ccw	no	10.80	20.17	16.59	7			4	204
+662	cw	no	9.88	22.12	17.31	6			43	2758
+663	cw	no	10.31	15.37	15.30	8			5	204
+664	cw	yes	7.42	20.05	13.54	7			72	2834
+665	cw	no	10.10	10.73	12.16	8			40	2743
+666	cw	no	12.90	19.84	14.81	6			37	2731
+667		yes					multiple rosettes		65	2834
+668	ccw	yes	7.22	19.86	12.36	6			31	2204
+669	ccw	yes	6.38	13.71	9.77	7			32	2204
+670	cw	yes	7.25	15.82	10.31	7			15	768
+671	cw	no	9.93	22.33	17.09	7			53	2833
+672		no					multiple rosettes		41	2743
+673	ccw	no	8.95	15.00	12.63	7			44	2758
+674	cw	no	12.07	20.44	17.12	8			54	2833
+675	cw	yes	7.98	15.83	13.41	6			25	768
+676	cw	no	7.93	13.39	12.60	8			55	2833
+677			2.22	4.52	1.16	7	tiny		14	768
+678	ccw	yes	8.12	16.99	15.95	7			47	2758
+679	cw	no	8.56	18.65	15.33	6			42	2743
+680	ccw	no	9.10	14.90	15.30	10			8	204
+681		no					multiple rosettes		25	768
+682	ccw	no	8.48	15.25	12.77	8			75	204
+683	cw	yes	8.12	18.45	14.71	7			59	2833
+684	cw	yes	6.47	14.48	15.08	9			45	2758
+685	cw	no	9.31	15.58	14.77	8			34	2731
+686	ccw	yes	7.16	18.91	17.53	6			33	2204
+687		yes					did not thrive---irregular phyllotaxy		69	2834
+688		no					multiple rosettes		31	2204
+689	cw	no	6.34	12.58	9.85	7			35	2731
+690	ccw	yes	4.71	12.27	9.79	6			72	2834
