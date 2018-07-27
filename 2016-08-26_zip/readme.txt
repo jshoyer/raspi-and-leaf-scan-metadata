@@ -1,7 +1,10 @@
 
 ** Figures 2 and 3 in the PlantCV 2 paper used a photo from this experiment
-photos/fov-01/2016-09-27_1025_ch129-pos01.jpg
-(photos/fov-01/2016-09-27_1030_ch129-pos01.jpg
+https://doi.org/10.7717/peerj.4088
+
+fov-01/2016-09-27_1025_ch129-pos01.jpg
+(fov-01/2016-09-27_1030_ch129-pos01.jpg
+ in the Zenodo upload
  is essentially the same.)
 
 See under image-analysis-scripts/figure.2and3.multiplant.watershed/
@@ -96,9 +99,10 @@ The phases started at slightly different times for different plants.
 | [2016-10-10 Mon] | 45 | Stop photo capture, photograph color cards | 34 |
 
 
-* Initial (human-readable) start on MIAPPE information
-(Per [[http://doi.org/10.1186/s13007-016-0144-4][Ćwiek-Kupczyńska et al. 2016]]
-and [[http://cropnet.pl/phenotypes/wp-content/uploads/2016/04/MIAPPE.pdf][PDF]])
+* Initial (human-readable) start on MIAPPE 1.0 information
+Per Ćwiek-Kupczyńska et al. 2016
+(http://doi.org/10.1186/s13007-016-0144-4).
+See http://cropnet.pl/phenotypes/wp-content/uploads/2016/04/MIAPPE.pdf
 
 1. General
    a. Unique identifier: 2016-08-26_zip

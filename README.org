@@ -1,4 +1,19 @@
 
+Metadata, code, and other documentation
+for time-course analyses
+of /A. thaliana/ growth
+with Raspberry Pi cameras
+and flatbed scanners.
+I am going to gradually release
+more datasets acquired in 2016 and 2017
+on Zenodo
+and similarly push
+better (machine-readable) metadata
+and annotations (ground truth labels)
+to Zenodo
+via this repository.
+
+
 For details on photo acquisition:
   - APPS protocol note paper: https://doi.org/cmxw
   - https://github.com/jshoyer/raspi-topdown-plant-imaging-12x
@@ -6,6 +21,10 @@ For details on photo acquisition:
       https://doi.org/10.5281/zenodo.594707
 
 ** 2016-08-26_zip
+Transgenic complemention experiment,
+for soon-to-be-submitted manuscript.
+See readme file in subdirectory.
+
 - Top-down photos: https://zenodo.org/record/1322154
 - Leaf scans and Canon camera photos:
   https://zenodo.org/record/1322799
