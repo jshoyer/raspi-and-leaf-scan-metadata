@@ -1037,10 +1037,10 @@ tipbasecenter <-
               by = c("plantNum")) # "image", "slice"))
 
 tipbasecenter <- mutate(tipbasecenter,
-                        bladeL =
+                        bladeLpi =
                             sqrt((x_tip - x_base)^2 +
                                  (y_tip - y_base)^2),
-                        petioleL =
+                        petioleLpi =
                             sqrt((x_center - x_base)^2 +
                                  (y_center - y_base)^2))
 
@@ -1059,7 +1059,7 @@ grid.newpage()
 pushViewport(viewport(width = 0.5, x = 0.3125))
 
 print(
-ggplot(bothtypes, aes(bladeL, bladeLength, col = leaf)) +
+ggplot(bothtypes, aes(bladeLpi, bladeLength, col = leaf)) +
     geom_point(size = 1) + # alpha = 0.5 does not work great.
                                         # lightness matters.
     scale_color_gradient(guide = "legend") +
@@ -1072,7 +1072,7 @@ upViewport()
 pushViewport(viewport(width = 0.5, x = 0.75))
 
 print(
-ggplot(bothtypes, aes(petioleL, petioleLength, col = leaf)) +
+ggplot(bothtypes, aes(petioleLpi, petioleLength, col = leaf)) +
     geom_point(size = 1) +
     scale_color_gradient(guide = "legend") +
     ylab(paste0(petioleLengthStr, " from flatbed scans")) +
@@ -1081,14 +1081,14 @@ ggplot(bothtypes, aes(petioleL, petioleLength, col = leaf)) +
 upViewport()
 
 ## Same:
-xyplot(bladeLength ~ bladeL, bothtypes,
+xyplot(bladeLength ~ bladeLpi, bothtypes,
        ylab = bladeLengthStr,
        xlab = blalab) # length (pixels)")
 
-filter(relset, bladeL > 200)
+filter(relset, bladeLpi > 200)
 filter(bothtypes, bladeLength < 0.51)
 
-xyplot(petioleLength ~ petioleL, bothtypes,
+xyplot(petioleLength ~ petioleLpi, bothtypes,
        ylab = petioleLengthStr,
        xlab = petlab)
        ## group = leaf, auto.key = TRUE)   ## Awful
