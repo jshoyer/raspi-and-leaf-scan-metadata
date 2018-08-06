@@ -503,7 +503,7 @@ write.table(todo, "working-data/remaining-plants_2016-10-03.tsv")
 write.table(todoStringent, "working-data/remaining-good-looking-plants_2016-10-03.tsv")
 
 secondSetSampled <- read.delim(
-    "../2016-08-26_zip/38-dps_sample-leaves/list-of-plants-sampled.txt",
+    "../2016-08-26_zip/38-dps_plants-for-leaf-sampling.txt",
     header = FALSE)
 #' Who is left after sampling those plants?
 data923blind <- mutate(data923blind,
