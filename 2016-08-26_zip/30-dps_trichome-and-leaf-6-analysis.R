@@ -14,7 +14,8 @@ library(lattice)
 source("../R/axis-label-strings-and-helper-function.R")
                                         # Includes workupTrichCaliper()
                                         # Loads dplyr
-## Reads in ../2016-05-13_zip/parent-vial-genotypes.txt
+
+gen <- read.delim("../2016-05-13_zip/parent-vial-genotypes.txt")
 
 #' Table copied from 2016-09-05 excel file:
 data923 <- read.delim(
