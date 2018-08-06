@@ -1,4 +1,22 @@
 
+** Overview
+As described in our manuscript,
+the main question of interest for this experiment
+was how sequence upstream of the AGO7 transcription start site
+might be sufficient (when driving the AGO7 coding sequence)
+for complementation of ago7 (zip-1) mutants.
+
+Transplants measured in this experiment
+were designated #401 to 490 (upper level of chamber)
+and #501 to 590 (lower level of chamber).
+
+- Top-down photos: https://zenodo.org/record/1322154
+  - Approximate pi photography configuration for this experiment:
+    https://zenodo.org/record/439652
+- Leaf scans and Canon camera photos:
+  https://zenodo.org/record/1322799
+
+
 ** Figures 2 and 3 in the PlantCV 2 paper used a photo from this experiment
 https://doi.org/10.7717/peerj.4088
 
@@ -12,8 +30,10 @@ at https://github.com/danforthcenter/plantcv-v2-paper/
 
 ** file:10-dps_randomize-positions-for-transplanting.R
 Transplant [2016-09-05 Mon]
+(see timetable below)
 
-** 17-dps-on_watering-log.txt
+'dps' = days post-stratification
+
 
 ** file:28-to-30-dps_abaxial-trichome-positions-and-true-leaf-6-caliper-measurements.txt
 Started 2016-09-23.
@@ -28,6 +48,10 @@ file:30-dps_trichome-and-leaf-6-analysis.R
 
 I used fully automatic shooting mode for all of these sets of photos,
 so unfortunately the exposure times (and possibly other settings) were quite variable.
+
+Photos enable checking that leaves were removed
+for flat-bed scanning
+in the correct phyllotactic order.
 
 
 * Timeline
@@ -47,11 +71,19 @@ The experiment can thought of as having six phases:
    after 39 empty pots/multi-rosette plants were pulled
 The phases started at slightly different times for different plants.
 
+Two files are kept around for historical reasons
+(until I find time to potentially streamline
+ 30-dps_trichome-and-leaf-6-analysis.R)
+but are not important to the main analysis:
+33-dps_second-set-of-abaxial-trichome-measurements.txt and
+38-dps_plants-for-leaf-sampling.txt
+
+
 ** Table by day
 
-| [2016-08-24 Wed] |    | Sterilize                                  |    |
+| [2016-08-24 Wed] |    | Sterilize seed                             |    |
 | [2016-08-25 Thu] |    |                                            |    |
-| [2016-08-26 Fri] |    | Plate                                      |    |
+| [2016-08-26 Fri] |    | Plate seed                                 |    |
 | [2016-08-27 Sat] |  1 |                                            |    |
 | [2016-08-28 Sun] |  2 |                                            |    |
 | [2016-08-29 Mon] |  3 |                                            |    |

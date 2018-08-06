@@ -12,6 +12,8 @@ better (machine-readable) metadata
 and annotations (ground truth labels)
 to Zenodo
 via this repository.
+Please file an issue on GitHub
+if you would like something clarified or added.
 
 
 For details on photo acquisition:
@@ -25,6 +27,12 @@ Transgenic complemention experiment,
 for soon-to-be-submitted manuscript.
 See readme file in subdirectory.
 
+Related records:
 - Top-down photos: https://zenodo.org/record/1322154
 - Leaf scans and Canon camera photos:
   https://zenodo.org/record/1322799
+  - Leaf measurements
+    in this directory
+    were made with LeafJ
+    (Maloof et al. 2013,
+    https://doi.org/10.3791/50028)
