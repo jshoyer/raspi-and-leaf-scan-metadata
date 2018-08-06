@@ -1005,7 +1005,7 @@ filter(leafj, transplantNum == 508) %>% select(leaf, petioleLength, bladeLength,
 #' Started 2017-10-03.
 
 #' library(dplyr)
-#' library(tidyr)
+library(tidyr)
 
 coordTable <-
     read.delim(
