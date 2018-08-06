@@ -26,7 +26,7 @@
 #' library(ggplot2); theme_set(theme_classic())
 source("../2016-08-26_zip/30-dps_trichome-and-leaf-6-analysis.R")
 #' This in turn runs
-#' source("../2016-05-13_zip/axis-label-strings-and-helper-function.R")
+#' source("../R/axis-label-strings-and-helper-function.R")
 #'
 #' I think the following may be equivalent
 #' and yield the one data frame we need,

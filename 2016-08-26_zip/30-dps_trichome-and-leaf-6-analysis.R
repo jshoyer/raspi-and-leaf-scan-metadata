@@ -11,7 +11,7 @@ library(digest)
 library(ggplot2); theme_set(theme_classic())
 library(grid)
 library(lattice)
-source("../2016-05-13_zip/axis-label-strings-and-helper-function.R")
+source("../R/axis-label-strings-and-helper-function.R")
                                         # Includes workupTrichCaliper()
                                         # Loads dplyr
 ## Reads in ../2016-05-13_zip/parent-vial-genotypes.txt
