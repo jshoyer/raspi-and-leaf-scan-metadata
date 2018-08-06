@@ -444,7 +444,7 @@ plot(hsd2)
 
 #' ** How well do trichome positions scored on 33 and 35 dps line up with the 28 to 30 dps ones?
 day33 <- read.delim(
-    "../2016-08-26_zip/33-dps_leaf-series-scans/abaxial-trichome-positions.txt")
+    "../2016-08-26_zip/33-dps_second-set-of-abaxial-trichome-measurements.txt")
 
 day33 <- rename(day33, firstLeaf33 = firstLeaf)
 firstSetSampled <- inner_join(workedUp923, day33)
