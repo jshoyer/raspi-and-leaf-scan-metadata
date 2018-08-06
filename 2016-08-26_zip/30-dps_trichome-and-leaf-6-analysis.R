@@ -15,7 +15,7 @@ source("../R/axis-label-strings-and-helper-function.R")
                                         # Includes workupTrichCaliper()
                                         # Loads dplyr
 
-gen <- read.delim("../2016-05-13_zip/parent-vial-genotypes.txt")
+gen <- read.delim("../2016-08-26_zip/00_parent-vial-genotypes.txt")
 
 #' Table copied from 2016-09-05 excel file:
 data923 <- read.delim(
@@ -37,6 +37,7 @@ data923$promoter2 <- factor(data923$promoter2,  # Alternate order/notation
                             levels = c("WT", codesInOrder[3:8], "zip-1"))
 
 #' For convenience, when we do not want to use vial numbers:
+dir.create("working-data")
 writeLines(as.character(data923$promoter),
            "working-data/genotype-coded-plants-in-order.txt")
 digest("working-data/genotype-coded-plants-in-order.txt",
