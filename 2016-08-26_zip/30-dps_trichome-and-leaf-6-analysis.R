@@ -114,7 +114,6 @@ outcsvfile1 <- "../2016-08-26_zip/working-data/better-labeled-923.csv"
 write.csv(data923, outcsvfile1, row.names = FALSE)
 digest(algo = "sha1", file = outcsvfile1)
 # e69166dfff8d29e5ae7dad56d7c20269f9cdcaaf
-#' Read in by analysis-7.R, but not really used.
 
 
 #' ** How well did my quick binary classification as zippy/nonzippy work?
@@ -153,7 +152,6 @@ outcsvfile <- "../2016-08-26_zip/working-data/workedUp923.csv"
 write.csv(workedUp923, outcsvfile, row.names = FALSE)
 digest(algo = "sha1", file = outcsvfile)
 # 35fb87512213a58a59686055369a817bddb5af7e
-#' Read in by analysis-7.R
 
 with(workedUp923, table(promoter, firstLeaf))
 
@@ -201,10 +199,6 @@ ab + geom_histogram(fill = "gray", stat = "count") +
                 linetype="dashed", size = 0.5)
 )
 
-#' I cannot figure out how to set the x-limits
-#' for the other version of the plot, below.
-#' I currently have to add the promoter diagrams manually.
-
 upViewport()
 pushViewport(viewport(x = 0, just = "left", width = 1/3))
 pushViewport(viewport(y = 0.525, height = 0.95, width = 0.9))
@@ -218,13 +212,6 @@ for (i in 1:6) {
 
 # todo:
 #       properly round mean/SD and draw it as a table directly next to graph
-
-ab2 + geom_bar(fill = "gray") +
-    facet_grid(promoter ~ .) + xlab(indx) +
-    scale_y_discrete(limits = zft) +
-    scale_x_discrete() +
-    geom_vline(data = trichmeansd, aes(xintercept = meanFirst),
-                linetype="dashed", size = 0.5)
 
 
 #' Adapted from ../2016-05-13_zip/abaxial-trichome-and-leaf-6-analysis.R
