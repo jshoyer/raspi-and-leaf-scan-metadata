@@ -57,7 +57,7 @@ AtoH <- LETTERS[1:8]
 
 data923blind <- select(data923,
                        -transgene, -background,
-                       -parentVial, -sourcePlate
+                       -parentVial, -sourcePlate,
                        -notes)
 data923blind$promoter <- factor(data923blind$promoter, labels = sample(AtoH))
 data923blind$promoter <- factor(data923blind$promoter,
