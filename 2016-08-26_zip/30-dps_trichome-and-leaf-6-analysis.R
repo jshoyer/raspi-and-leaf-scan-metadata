@@ -135,6 +135,7 @@ filter(data923, promoter == "1934 bp", zippy == "yes")
 #' Likewise, it is very clear
 #' that plant 545 displayed a mutant phenotype.
 
+#' "Misassigned" plants
 filter(data923, promoter ==  "495 bp", zippy == "yes")
 filter(data923, promoter ==  "453 bp", zippy == "yes")
 #' Plant 528 had a complicated phyllotaxy.
@@ -165,25 +166,12 @@ trichmeansd <-
               meanLw    = mean(lwratio),
               sdLw      = sd(lwratio))
 
-## Redundant: kept to avoid having to edit code for scatterplots below,
-## which apparently broke anyway?
-bpmeansd <-
-    summarize(grouped923, mean(bpratio), sd(bpratio))
-lwmeansd <-
-    summarize(grouped923, mean(lwratio), sd(lwratio))
 
-#' Cf. ../2015-05_zip/analysis.R
-#' (on branch).
-#' Plant 626 first trichome position was initially not written down:
-#' filter(workedUp923, is.na(firstLeaf))
-#' No longer needed after rescoring 9/26: workedUp923 <- filter(workedUp923, !is.na(firstLeaf))
-
-#' Method 1: clumsy
 ab <- ggplot(workedUp923, aes(as.factor(firstLeaf)))
-#' Method 2: extends x-axis unnecessarily. (See below)
-ab2 <- ggplot(workedUp923, aes(firstLeaf))
 
 zft <- c(5, 10)
+
+#' Supplemental Figure S7:
 
 #' dev.new(width = 10 * 16/9, height = 10)
 grid.newpage()
@@ -269,104 +257,20 @@ for (i in 1:7) {
 #' pvals[1]
 
 adjusted <- p.adjust(pvals, "BH")
-# See grid: file:readme.txt::#trichome-BH-adjusted-p-values
 
-#' I was curious about the numbers
-#' for two slightly more conservative adjustments:
-#' p.adjust(c(pvals[1:6], pvalsNegC), "holm")
-#' p.adjust(c(pvals[1:6], pvalsNegC), "hommel")
+######################################################################
 
 #' * Leaf caliper measurements
-#' ** General checks
-#' These do not work well at all because there are *eight* genotypes.
-#' Lattice starts reusing colors for multiple groups.
-#' Therefore for now I just drop one of the groups:
-noZero923 <- filter(workedUp923, promoter != "0 bp")
-noZero923$promoter <- factor(noZero923$promoter, levels = codesInOrder[-8])
-#' head(workedUp923)
-#' head(noZero923)
-
-#' How well do shape measurements correlate with trichome positions?
-xyplot(bladeL   ~ jitter(firstLeaf),
-       data = noZero923, groups = promoter, auto.key = TRUE)
-xyplot(bladeW   ~ jitter(firstLeaf),
-       data = noZero923, groups = promoter, auto.key = TRUE)
-xyplot(petioleL ~ jitter(firstLeaf),
-       data = noZero923, groups = promoter, auto.key = TRUE)
-
-## See below
-xyplot(bpratio   ~ jitter(firstLeaf),
-       data = noZero923, groups = promoter, auto.key = TRUE)
-xyplot(lwratio   ~ jitter(firstLeaf),
-       data = noZero923, groups = promoter, auto.key = TRUE)
-
-xyplot(bladeW   ~ petioleL,
-       data = noZero923, groups = promoter, auto.key = TRUE)
-xyplot(bladeW   ~ bladeL,
-       data = workedUp923, groups = promoter)
-## Tightest correlation:
-xyplot(petioleL ~ bladeL,
-       data = noZero923, groups = promoter, auto.key = TRUE)
-
-
-#' ** Correlation between phenotype means
-plot(trichmeansd$meanLw, trichmeansd$meanBp, type = "n",
-     xlab = blw,    ylab = blpl)
-text(trichmeansd$meanLw, trichmeansd$meanBp, codesInOrder)
-
-#' In some sense the 422 bp promoter transgene
-#' can complement the leaf shape phenotype
-#' *better* than it can complement the trichome position phenotype.
-#' (Discussed with Jim 2016-09-26)
-plot(trichmeansd$meanFirst, lwmeansd$mean, type = "n",
-     xlab = indx,      ylab = blpl)
-text(trichmeansd$meanFirst, lwmeansd$mean, codesInOrder)
-
-plot(trichmeansd$meanFirst, bpmeansd$mean, type = "n",
-     xlab = indx,      ylab = blw)
-text(trichmeansd$meanFirst, bpmeansd$mean, codesInOrder)
-
-
-#' ** Univariate scatterplot checks
+#' Better default order:
 workedUp923rev <- workedUp923
 workedUp923rev$promoter <- factor(workedUp923$promoter, levels = rev(codesInOrder))
 
-dotplot(promoter ~ bladeW, data = workedUp923rev,
-       xlab = bw)
-dotplot(promoter ~ bladeL, data = workedUp923rev,
-       xlab = bl)
-filter(workedUp923, bladeL > 25)
-dotplot(promoter ~ bladeL, group = zippy, data = workedUp923rev,
-       xlab = pl, pch = 19, alpha = 0.5)
-dotplot(promoter ~ petioleL, data = workedUp923rev,
-       xlab = pl)
-dotplot(promoter ~ petioleL, group = zippy, data = workedUp923rev,
-       xlab = pl, pch = 19, alpha = 0.5)
-filter(workedUp923, petioleL < 5.75)
-
-#' Actual graphs of interest:
-dotplot(promoter ~ bpratio, data = workedUp923rev,
-       xlab = blpl)
-#' Positions for severally of the plants scored as 'zippy'
-#' is somewhat puzzling:
-dotplot(promoter ~ bpratio, group = zippy, data = workedUp923rev,
-       xlab = blpl, pch = 19, alpha = 0.5)
-filter(workedUp923, bpratio > 2)
-workedUp923minusOutliers <- filter(workedUp923rev, bpratio < 2)
-
-dotplot(promoter ~ lwratio, data = workedUp923rev,
-       xlab = blw)
-dotplot(promoter ~ lwratio, group = zippy, data = workedUp923rev,
-       xlab = blw, pch = 19, alpha = 0.5)
-
+#' Extreme plants:
 filter(workedUp923, lwratio > 3)
 filter(workedUp923, lwratio < 1.25)
 
-######################################################################
-# The same thing, but nicer looking,
-# and with grid graphics stuff
-# for ~/r/thesis-co-1/reports/captions/fig-leaf-6-caliper-lw.tex
-
+#' Supplemental Figure S5:
+#'
 #' dev.new(width = 6.5, height = 6.5 * 2/3)
 
 grid.newpage()
@@ -382,13 +286,6 @@ ggplot(workedUp923rev, aes(bpratio, promoter)) +
 
 upViewport()
 
-# (skip this one)
-#' ggplot(workedUp923minusOutliers, aes(bpratio, promoter)) +
-#'     ylab("") + xlab(blpl) +
-#'     geom_point(alpha = 0.25) +
-#'     geom_point(aes(meanBp, promoter), trichmeansd,
-#'                shape = "|", col = "red", size = 4)
-
 pushViewport(viewport(width = 0.45, x = 0.35))
 
 print(
@@ -401,23 +298,6 @@ ggplot(workedUp923rev, aes(lwratio, promoter)) +
 
 upViewport()
 ######################################################################
-
-dotplot(promoter ~ bpratio, group = dayScored, data = workedUp923rev,
-       xlab = blpl, auto.key = TRUE)
-#' filter(workedUp923, bpratio > 2)
-dotplot(promoter ~ lwratio,  group = dayScored, data = workedUp923rev,
-       xlab = blw)
-
-#' Most of the plants
-#' with an apparently very high blade length:petiole length ratio
-#' were scored on the first of the three days.
-#' I will examine those plants in detail soon.
-dotplot(promoter ~ bpratio | dayScored, data = workedUp923rev,
-       xlab = blpl, auto.key = TRUE)
-dotplot(promoter ~ lwratio | dayScored, data = workedUp923rev,
-       xlab = blw)
-#' (No other patterns jumped out at me.)
-
 
 #' ** Formal statistical analysis
 summary(fm1 <- aov(bpratio ~ promoter, data = workedUp923))
@@ -468,26 +348,6 @@ data923blindMain <- filter(data923blind, is.na(exclude))
 with(data923blindMain, table(promoter))
 with(data923blindMain, table(promoter, flatPos))
 
-
-todo <- filter(data923blindMain, !sampledAlready)
-todoStringent <- filter(todo, !exclude2)
-
-with(todo, table(promoter))
-with(todoStringent, table(promoter))
-
-with(todo, table(flatPos))
-with(todoStringent, table(flatPos))
-
-#' Flat 3 is perfectly balanced: one plant of each genotype.
-#' Flat 2 could be perfectly balanced
-#' if we do not exclude multirosette plants 524 and 525.
-#' (I opted to sample those two plants,
-#'  as noted on p. 68.)
-with(todo, table(promoter, flatPos))
-with(todoStringent, table(promoter, flatPos))
-
-write.table(todo, "working-data/remaining-plants_2016-10-03.tsv")
-write.table(todoStringent, "working-data/remaining-good-looking-plants_2016-10-03.tsv")
 
 secondSetSampled <- read.delim(
     "../2016-08-26_zip/38-dps_plants-for-leaf-sampling.txt",
