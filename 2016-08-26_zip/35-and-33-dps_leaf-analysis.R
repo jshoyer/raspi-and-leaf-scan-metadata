@@ -363,39 +363,11 @@ ggplot(meansRef, aes(leaf, meanPetioleLength, col = promoter2)) +
         meansRef, alpha = 0.1) +
     xlab(leafStr) + ylab(petioleLengthStr)
 
-ggplot(first8, aes(leaf, petioleLength, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(petioleLengthStr) +
-    geom_point(position = position_jitterdodge()) +
-    geom_line(aes(leaf, meanPetioleLength), means1to8) + oneToEight
-
-#' ggplot(leafj33b, aes(leaf,  petioleLength, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(petioleLengthStr) +
-#'     geom_point(position = position_jitterdodge()) +
-#'     geom_line(aes(leaf, meanPetioleLength), means33) + oneToTen
-#'
-#' ggplot(leafj35b, aes(leaf, petioleLength, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(petioleLengthStr) +
-#'     geom_point(position = position_jitterdodge()) +
-#'     geom_line(aes(leaf, meanPetioleLength), means35) + oneToTen
-
-ggplot(leafj, aes(leaf, petioleLength, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(petioleLengthStr) +
-    geom_point(position = position_jitterdodge()) +
-    geom_line(aes(leaf, meanPetioleLength), means2) + oneToTen +
-    facet_grid(dps ~ .)
 
 ggplot(leafj, aes(leaf, petioleLength, fill = promoter2, col = promoter2)) +
     xlab(leafStr) + ylab(petioleLengthStr) +
     geom_point(position = position_jitterdodge()) +
     geom_line(aes(leaf, meanPetioleLength), means) + oneToTen
-
-#' **** Scans vs. calipers: slightly odd, but worth looking.
-#' (Scans done 33 and 35 dps, caliper measurements done 28 to 30 dps.
-ggplot(leaf6j, aes(petioleLength, petioleL, fill = promoter2, col = promoter2)) +
-    xlab("Petiole length, day 33 or 35 (cm; LeafJ)") +
-    ylab("Petiole length, day 28, 29, or 30 (mm; calipers)") +
-    geom_point(alpha = 0.5) + scm
-filter(leafj, petioleLength > 2.5)
 
 
 #' *** Blade length
@@ -414,40 +386,10 @@ ggplot(meansRef, aes(leaf, meanBladeLength, col = promoter2)) +
         width = 0.25) +
     xlab(leafStr) + ylab(bladeLengthStr)
 
-ggplot(first8, aes(leaf,  bladeLength, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(bladeLengthStr) +
-    geom_line(aes(leaf, meanBladeLength), means1to8) +
-    geom_point(position = position_jitterdodge()) + oneToEight
-
-#' ggplot(leafj33b, aes(leaf,  bladeLength, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(bladeLengthStr) +
-#'     geom_line(aes(leaf, meanBladeLength), means33) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-#' ggplot(leafj35b, aes(leaf,  bladeLength, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(bladeLengthStr) +
-#'     geom_line(aes(leaf, meanBladeLength), means35) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-ggplot(leafj, aes(leaf,  bladeLength, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(bladeLengthStr) +
-    geom_line(aes(leaf, meanBladeLength), means2) +
-    geom_point(position = position_jitterdodge()) + oneToTen +
-    facet_grid(dps ~ .)
-
 ggplot(leafj, aes(leaf,  bladeLength, fill = promoter2, col = promoter2)) +
     xlab(leafStr) + ylab(bladeLengthStr) +
     geom_line(aes(leaf, meanBladeLength), means) +
     geom_point(position = position_jitterdodge()) + oneToTen
-
-#' **** Scans vs. calipers
-ggplot(leaf6j, aes(bladeLength, bladeL, fill = promoter2, col = promoter2)) +
-    xlab("Blade length, day 33 or 35 (cm; LeafJ)") +
-    ylab("Blade length, day 28, 29, or 30 (mm; calipers)") +
-    geom_point(alpha = 0.5) + scm
-
-## Perhaps I should make a version with a 45° aspect ratio
-## and perhaps an origin at zero.
 
 
 #' *** Blade width
@@ -465,44 +407,19 @@ ggplot(meansRef, aes(leaf, meanBladeWidth, col = promoter2)) +
         meansRef, width = 0.25) +
     xlab(leafStr) + ylab(bladeWidthStr)
 
-ggplot(first8, aes(leaf,  bladeWidth, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(bladeWidthStr) +
-    geom_line(aes(leaf, meanBladeWidth), means1to8) +
-    geom_point(position = position_jitterdodge()) + oneToEight
-
-#' ggplot(leafj33b, aes(leaf,  bladeWidth, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(bladeWidthStr) +
-#'     geom_line(aes(leaf, meanBladeWidth), means33) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-#' ggplot(leafj35b, aes(leaf,  bladeWidth, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(bladeWidthStr) +
-#'     geom_line(aes(leaf, meanBladeWidth), means35) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-ggplot(leafj, aes(leaf,  bladeWidth, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(bladeWidthStr) +
-    geom_line(aes(leaf, meanBladeWidth), means2) +
-    geom_point(position = position_jitterdodge()) + oneToTen +
-    facet_grid(dps ~ .)
-
 ggplot(leafj, aes(leaf,  bladeWidth, fill = promoter2, col = promoter2)) +
     xlab(leafStr) + ylab(bladeWidthStr) +
     geom_line(aes(leaf, meanBladeWidth), means) +
     geom_point(position = position_jitterdodge()) + oneToTen
 
-#' **** Scans vs. calipers
-ggplot(leaf6j, aes(bladeWidth, bladeW, fill = promoter2, col = promoter2)) +
-    xlab("Blade width, day 33 or 35 (cm; LeafJ)") +
-    ylab("Blade width, day 28, 29, or 30 (mm; calipers)") +
-    geom_point(alpha = 0.5) + scm
-
 
 #' ** Leaf series plots: ratios
 #' *** Blade length:Petiole length ratio
+#'
+#' Supplemental Figure S6:
+#'
 #' dev.new(height = 10, width = 10 * 16/9)
 
-#' **** Some later (hopefully simpler) plots)
 library(grid)
 
 mnsblpl <-
@@ -534,57 +451,9 @@ upViewport()
 pushViewport(viewport(width = 1/2, x = 3/4))
 print(allblpl, newpage = FALSE)
 
-#' **** Initial main graph---faint lines are hard to see on a big screen
-ggplot(leafj, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansRef) +
-    geom_line(aes(leaf, meanBpRatio), meansF) +
-    geom_line(aes(leaf, meanBpRatio), meansG) +
-    geom_line(aes(leaf, meanBpRatio), meansH) +
-    geom_line(aes(group = transplantNum), alpha = 0.1) +
-    geom_point(alpha = 0.25) + oneToTen + scm +
-    facet_wrap( ~ set)
-
 filter(leafj33b, bpRatio > 3)  # See notes in 33-dps_leaf-series-scans/readme.txt
 # file:33-dps_leaf-series-scans/readme.txt::p-588
-#' Hide two data points, to make better use of graphing area space:
-leafjCensored <- leafj
-leafjCensored$bpRatio[leafj$bpRatio > 3] <- NA
 
-ggplot(leafjCensored, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansRef) +
-    geom_line(aes(leaf, meanBpRatio), meansF) +
-    geom_line(aes(leaf, meanBpRatio), meansG) +
-    geom_line(aes(leaf, meanBpRatio), meansH) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm +
-    facet_wrap( ~ set)
-
-#' **** The same panels, one by one:
-ggplot(refLines, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansRef) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm
-
-ggplot(setF2, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansF) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm
-
-ggplot(setG2, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansG) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm
-
-ggplot(setH2, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansH) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm
 
 #' **** Still more: Simpler line graphs, with error bars
 ggplot(meansRef, aes(leaf, meanBpRatio, col = promoter2)) +
@@ -593,121 +462,10 @@ ggplot(meansRef, aes(leaf, meanBpRatio, col = promoter2)) +
     geom_linerange(aes(leaf, ymin = meanMinusSEMBpRatio, ymax = meanPlusSEMBpRatio), meansRef) +
     oneToTen + scm
 
-## (Cf. directly below)
-#' ggplot(meansF, aes(leaf, meanBpRatio, col = promoter2)) +
-#'     geom_line() +
-#'     xlab(leafStr) + ylab(blpl) +
-#'     geom_linerange(
-#'         aes(ymin = meanMinusSEMBpRatio,
-#'             ymax = meanPlusSEMBpRatio), meansF, alpha = 0.25) +
-#'     oneToTen + scm
-
-ggplot(meansF, aes(leaf, meanBpRatio, col = promoter2)) +
-    geom_line() +
-    xlab(leafStr) + ylab(blpl) +
-    geom_linerange(
-        aes(ymin = meanMinusSEMBpRatio,
-            ymax = meanPlusSEMBpRatio), meansF2, alpha = 0.25) +
-    oneToTen + scm
-
-ggplot(meansG, aes(leaf, meanBpRatio, col = promoter2)) +
-    geom_line() +
-    xlab(leafStr) + ylab(blpl) +
-    geom_linerange(
-        aes(ymin = meanMinusSEMBpRatio,
-            ymax = meanPlusSEMBpRatio), meansG2, alpha = 0.25) +
-    oneToTen + scm
-
-ggplot(meansH, aes(leaf, meanBpRatio, col = promoter2)) +
-    geom_line() +
-    xlab(leafStr) + ylab(blpl) +
-    geom_linerange(
-        aes(ymin = meanMinusSEMBpRatio,
-            ymax = meanPlusSEMBpRatio), meansH2, alpha = 0.25) +
-    oneToTen + scm
-
-
-
-#' **** Others
-#' Manually set color scheme not great with these.
-#' For the orange-red colors I paired light with dark for contrast,
-#' but with this way of subsetting the darks end up with darks etc.
-#' Therefore just let ggplot assign colors automatically,
-#' is a somewhat color-blind-unfriendly way.
-
-ggplot(setC2, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansC) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen
-
-ggplot(setD2, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansD) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen
-
-ggplot(setE2, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansE) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen
-
-#' Current manual jittering not enough for the sets of three/five:
-ggplot(setB2, aes(leafjit,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansB) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm
-
-ggplot(setB, aes(leaf,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansB) +
-    geom_point(position = position_jitterdodge()) + oneToTen + scm
-
-ggplot(setA, aes(leaf,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), meansA) +
-    geom_point(position = position_jitterdodge()) + oneToTen + scm
-
-
-#' ggplot(leafj33b, aes(leaf,  bpRatio, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(blpl) +
-#'     geom_line(aes(leaf, meanBpRatio), means33) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-filter(leafj33b, bpRatio > 3)
-#' See also above and file:33-dps_leaf-series-scans/readme.txt::p-588
-
-#' ggplot(leafj35b, aes(leaf,  bpRatio, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(blpl) +
-#'     geom_line(aes(leaf, meanBpRatio), means35) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-ggplot(leafj, aes(leaf,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), means2) +
-    geom_point(position = position_jitterdodge()) + oneToTen +
-    facet_grid(dps ~ .)
-
-#' We can connect points with faint lines,
-#' but this does not look good if we jitter the points,
-#' and is too crowded if we do not:
-ggplot(leafj, aes(leaf,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), means) +
-    geom_line(aes(group = transplantNum), alpha = 0.1) +
-    geom_point() +# position = position_jitterdodge()) + oneToTen
-    oneToTen
-#' (Hence the manual jittering done above)
-
-ggplot(leafj, aes(leaf,  bpRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blpl) +
-    geom_line(aes(leaf, meanBpRatio), means) +
-    geom_point(position = position_jitterdodge()) + oneToTen
 
 #' *** Blade length:Blade width ratio
-#' **** Some later (hopefully simpler) plots)
+#'
+#' Figure 7:
 
 mnslw <-
     ggplot(meansI, aes(leaf, meanLwRatio, fill = promoter2, col = promoter2)) +
@@ -738,84 +496,6 @@ upViewport()
 pushViewport(viewport(width = 1/2, x = 3/4))
 print(alllw, newpage = FALSE)
 
-ggplot(leafj, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_point() + oneToTen + scm +
-    geom_line(aes(group = transplantNum), alpha = 0.5) +
-    facet_wrap( ~ promoter2, ncol = 1)
-
-
-#' **** Initial main graph---faint lines are hard to see on a big screen
-ggplot(leafj, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), meansRef) +
-    geom_line(aes(leaf, meanLwRatio), meansF) +
-    geom_line(aes(leaf, meanLwRatio), meansG) +
-    geom_line(aes(leaf, meanLwRatio), meansH) +
-    geom_line(aes(group = transplantNum), alpha = 0.1) +
-    geom_point(alpha = 0.25) + oneToTen + scm +
-    facet_wrap( ~ set)
-
-#' No longer needed after correcting one leaf blade ROI
-#' in [[ci:935f9ee55d9806a7825c1e2a5903dca8902d65d1]]
-#'filter(leafj33b, lwRatio > 4)
-#leafjCensored$lwRatio[leafj$lwRatio > 4]  <- NA
-
-#' **** The same plots again, one by one:
-ggplot(refLines, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), meansRef) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm
-
-ggplot(setF2, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), meansF) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm
-
-ggplot(setG2, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), meansG) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm
-
-ggplot(setH2, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), meansH) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen + scm
-
-#' **** Two of the above, without the faint lines
-
-#' pdf("blade-length-width-simple-line-graphs-for-slides.pdf", 10, 5)
-ggplot(refLines, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    geom_line(aes(leaf, meanLwRatio), meansRef) +
-    xlab(leafStr) +
-    ylab(blw) + ylim(1, 2.75) +
-    oneToTen + scm
-##
-ggplot(setH2, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    geom_line(aes(leaf, meanLwRatio), meansH) +
-    xlab(leafStr) +
-    ylab(blw) + ylim(1, 2.75) +
-    oneToTen + scm
-##
-ggplot(setF2, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    geom_line(aes(leaf, meanLwRatio), meansF) +
-    xlab(leafStr) +
-    ylab(blw) + ylim(1, 2.75) +
-    oneToTen + scm
-#' The following is probably best: plot all means
-#' (and then delete individual mean lines with Illustrator).
-#' Color scheme leaves something to be desired.
-ggplot(setF2, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    geom_line(aes(leaf, meanLwRatio), meansA) +
-    geom_line(aes(leaf, meanLwRatio), meansB) +
-    xlab(leafStr) +
-    ylab(blw) + ylim(1, 2.75) +
-    oneToTen + scm
-#' dev.off()
 
 #' **** Similar: Simpler line graphs, with error bars
 ggplot(meansRef, aes(leaf, meanLwRatio, col = promoter2)) +
@@ -824,172 +504,6 @@ ggplot(meansRef, aes(leaf, meanLwRatio, col = promoter2)) +
     geom_linerange(aes(leaf, ymin = meanMinusSEMLwRatio, ymax = meanPlusSEMLwRatio), meansRef) +
     oneToTen + scm
 
-ggplot(meansF, aes(leaf, meanLwRatio, col = promoter2)) +
-    geom_line() +
-    xlab(leafStr) + ylab(blw) +
-    geom_linerange(
-        aes(ymin = meanMinusSEMLwRatio,
-            ymax = meanPlusSEMLwRatio), meansF2, alpha = 0.25) +
-    oneToTen + scm
-
-ggplot(meansG, aes(leaf, meanLwRatio, col = promoter2)) +
-    geom_line() +
-    xlab(leafStr) + ylab(blw) +
-    geom_linerange(
-        aes(ymin = meanMinusSEMLwRatio,
-            ymax = meanPlusSEMLwRatio), meansG2, alpha = 0.25) +
-    oneToTen + scm
-
-ggplot(meansH, aes(leaf, meanLwRatio, col = promoter2)) +
-    geom_line() +
-    xlab(leafStr) + ylab(blw) +
-    geom_linerange(
-        aes(ymin = meanMinusSEMLwRatio,
-            ymax = meanPlusSEMLwRatio), meansH2, alpha = 0.25) +
-    oneToTen + scm
-
-#' **** Others
-ggplot(setC2, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), meansC) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen
-
-ggplot(setD2, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), meansD) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen
-
-ggplot(setE2, aes(leafjit,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), meansE) +
-    geom_line(aes(group = transplantNum), alpha = 0.05) +
-    geom_point(alpha = 0.25) + oneToTen
-
-ggplot(first8, aes(leaf,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), means1to8) +
-    geom_point(position = position_jitterdodge()) + oneToEight
-
-#' ggplot(leafj33b, aes(leaf,  lwRatio, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(blw) +
-#'     geom_line(aes(leaf, meanLwRatio), means33) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-#' filter(leafj33b, lwRatio > 4)
-# See also above.
-
-#' ggplot(leafj35b, aes(leaf,  lwRatio, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(blw) +
-#'     geom_line(aes(leaf, meanLwRatio), means35) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-ggplot(leafj, aes(leaf,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), means2) +
-    geom_point(position = position_jitterdodge()) + oneToTen +
-    facet_grid(dps ~ .)
-
-ggplot(leafj, aes(leaf,  lwRatio, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(blw) +
-    geom_line(aes(leaf, meanLwRatio), means) +
-    geom_point(position = position_jitterdodge()) + oneToTen
-
-
-######################################################################
-
-#' ** Leaf series plots: blade perimeters and circularity
-#' *** Blade perimeter
-ggplot(refLines, aes(leaf, bladePerimeter, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(perimeterStr) +
-    geom_line(aes(leaf, meanBladePerimeter), meansRef) +
-    geom_point(position = position_jitterdodge()) + oneToTen
-
-ggplot(first8, aes(leaf, bladePerimeter, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(perimeterStr) +
-    geom_line(aes(leaf, meanBladePerimeter), means1to8) +
-    geom_point(position = position_jitterdodge()) + oneToEight
-
-#' ggplot(leafj33b, aes(leaf, bladePerimeter, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(perimeterStr) +
-#'     geom_line(aes(leaf, meanBladePerimeter), means33) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-#' ggplot(leafj35b, aes(leaf, bladePerimeter, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(perimeterStr) +
-#'     geom_line(aes(leaf, meanBladePerimeter), means35) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-
-ggplot(leafj, aes(leaf, bladePerimeter, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(perimeterStr) +
-    geom_line(aes(leaf, meanBladePerimeter), means2) +
-    geom_point(position = position_jitterdodge()) + oneToTen +
-    facet_grid(dps ~ .)
-
-ggplot(leafj, aes(leaf, bladePerimeter, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(perimeterStr) +
-    geom_line(aes(leaf, meanBladePerimeter), means) +
-    geom_point(position = position_jitterdodge()) + oneToTen
-
-
-#' *** Blade circularity has some 'outliers'
-ggplot(refLines, aes(leaf, bladeCircularity, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(circularityStr) +
-    geom_line(aes(leaf, meanBladeCircularity), meansRef) +
-    geom_point(position = position_jitterdodge()) + oneToTen
-
-ggplot(first8, aes(leaf, bladeCircularity, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(circularityStr) +
-    geom_line(aes(leaf, meanBladeCircularity), means1to8) +
-    geom_point(position = position_jitterdodge()) + oneToEight
-
-#' ggplot(leafj33b, aes(leaf, bladeCircularity, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(circularityStr) +
-#'     geom_line(aes(leaf, meanBladeCircularity), means33) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-#' ggplot(leafj35b, aes(leaf, bladeCircularity, fill = promoter2, col = promoter2)) +
-#'     xlab(leafStr) + ylab(circularityStr) +
-#'     geom_line(aes(leaf, meanBladeCircularity), means35) +
-#'     geom_point(position = position_jitterdodge()) + oneToTen
-
-ggplot(leafj, aes(leaf, bladeCircularity, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(circularityStr) +
-    geom_line(aes(leaf, meanBladeCircularity), means2) +
-    geom_point(position = position_jitterdodge()) + oneToTen +
-    facet_grid(dps ~ .)
-
-ggplot(leafj, aes(leaf, bladeCircularity, fill = promoter2, col = promoter2)) +
-    xlab(leafStr) + ylab(circularityStr) +
-    geom_line(aes(leaf, meanBladeCircularity), means) +
-    geom_point(position = position_jitterdodge()) + oneToTen
-
-filter(leafj, bladeCircularity > 0.65)
-filter(leafj, bladeCircularity < 0.39)
-
-#' ** Univariate scatterplots
-# Argh: doing the following does not have the desired effect:
-#leaves5to10 <- filter(leafj, leaf > 4)
-
-#' Upon revisiting this,
-#' I think that looking at the graphs one by one
-#' would work better than faceting.
-
-ggplot(leafj, aes(lwRatio, promoter2)) +
-    ylab("") + xlab(blw) +
-    geom_point(alpha = 0.25) +
-    geom_point(aes(meanLwRatio, promoter2), means,
-               shape = "|", col = "red", size = 4) +
-    facet_wrap( ~ leaf)
-
-ggplot(leafj, aes(bpRatio, promoter2)) +
-    ylab("") + xlab(blw) +
-    geom_point(alpha = 0.25) +
-    geom_point(aes(meanBpRatio, promoter2), means,
-               shape = "|", col = "red", size = 4) +
-    facet_wrap( ~ leaf)
 
 #' ** Some plants of interest
 filter(leafj, transplantNum == 528) %>% select(leaf, petioleLength, bladeLength,
@@ -1051,6 +565,9 @@ bothtypes <-
                                      "leaf" = "leafNum"))
 
 ########################################
+
+#' Figure 3.9 in thesis:
+
 petlab <- "Projected petiole length (pixels)"
 blalab <- "Projected leaf blade length (pixels)"
 
@@ -1080,17 +597,7 @@ ggplot(bothtypes, aes(petioleLpi, petioleLength, col = leaf)) +
 , newpage = FALSE)
 upViewport()
 
-## Same:
-xyplot(bladeLength ~ bladeLpi, bothtypes,
-       ylab = bladeLengthStr,
-       xlab = blalab) # length (pixels)")
-
 filter(relset, bladeLpi > 200)
 filter(bothtypes, bladeLength < 0.51)
-
-xyplot(petioleLength ~ petioleLpi, bothtypes,
-       ylab = petioleLengthStr,
-       xlab = petlab)
-       ## group = leaf, auto.key = TRUE)   ## Awful
 
 #' ** (end)
