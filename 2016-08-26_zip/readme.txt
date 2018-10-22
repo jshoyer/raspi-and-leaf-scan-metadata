@@ -71,12 +71,11 @@ The experiment can thought of as having six phases:
    after 39 empty pots/multi-rosette plants were pulled
 The phases started at slightly different times for different plants.
 
-Two files are kept around for historical reasons
-(until I find time to potentially streamline
- 30-dps_trichome-and-leaf-6-analysis.R)
-but are not important to the main analysis:
-33-dps_second-set-of-abaxial-trichome-measurements.txt and
+Two files are kept around partly for historical reasons:
+33-dps_second-set-of-abaxial-trichome-measurements.txt
+(scored trichomes a second time to measure internal consistency) and
 38-dps_plants-for-leaf-sampling.txt
+(leaves were collected for potential genotyping, which was not done)
 
 
 ** Table by day
