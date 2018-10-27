@@ -515,6 +515,39 @@ filter(leafj, transplantNum == 637) %>% select(leaf, petioleLength, bladeLength,
 filter(leafj, transplantNum == 508) %>% select(leaf, petioleLength, bladeLength,
                                                bladeWidth, bpRatio, lwRatio)
 
+#' ** A quick statistical comparison
+#' For which promoter fragments do means differ from the ago7 mutant?
+#' Use ago7 mutant (transformed with empty vector)
+#' as reference for comparison for contrasts:
+#' lines that have a significant coefficient
+#' can be tentatively interpreted as partially complemented.
+leafj$promoter2 <-
+    factor(leafj$promoter2,
+           levels(leafj$promoter2)[c(8, 1:7)])
+
+#' The following is the simplest linear model I think is worth considering.
+m1lw <- lm(lwRatio ~ promoter2 + leaf, leafj)
+# Refer to p-values for these coefficients
+# in the reply to Reviewer #1:
+summary(m1lw)
+#' plot(m1lw)
+anova(a1lw <- aov(m1lw))
+
+#' Also consider leaves 5 to 10,
+#' because they are a priori the ones most affected by heteroblasty.
+leaves5to10 <- filter(leafj, leaf < 4)
+
+m1lw5to10 <- lm(lwRatio ~ promoter2 + leaf, leaves5to10)
+# Results essentially the same:
+summary(m1lw5to10)
+#' plot(m1lw5to10)
+anova(a1lw5to10 <- aov(m1lw5to10))
+#' Situation is a bit more complicated for blade length:petiole length ratio.
+#'
+#' I would like to model the data  much more thoroughly than this,
+#' if time allows.
+
+
 #' ** How well do measurements from top-down RasPi photos correlate?
 #' Started 2017-10-03.
 
